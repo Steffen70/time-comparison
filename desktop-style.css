@@ -1,0 +1,62 @@
+.time-comparison {
+    width: 500px;
+    height: calc(var(--bar-height) * 2);
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-areas: "planed-time""recorded-time";
+    position: relative;
+}
+
+.time-comparison,
+.show-border {
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.show-border {
+    grid-column-start: var(--pseudo-pos) \ span 1;
+}
+
+.time-comparison>.planed {
+    grid-area: planed-time;
+}
+
+.time-comparison>.recorded-time {
+    grid-area: recorded-time;
+}
+
+.time-comparison>.planed,
+.time-comparison>.recorded-time {
+    grid-column-start: calc(var(--start-time) + 1);
+    grid-column-end: calc(var(--end-time) + 1);
+
+    position: relative;
+
+    background-color: var(--color);
+}
+
+.time-comparison>div span {
+    position: absolute;
+    display: inline-table;
+
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+.time-comparison>div span.from {
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+
+.time-comparison-wraper span {
+    padding: 0 var(--timespan-gap);
+}
+
+.time-comparison-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
