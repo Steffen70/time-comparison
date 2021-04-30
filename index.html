@@ -9,6 +9,13 @@
           content="width=device-width, initial-scale=1.0">
     <title>Preview</title>
 
+    <!--google fonts-->
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+          rel="stylesheet">
+
+    <!--my stylesheets-->
     <link rel="stylesheet"
           href="desktop-style.css">
 </head>
@@ -16,22 +23,65 @@
 <body>
     <div class="time-comparison-wraper"
          style="--timespan-gap: 5px; --bar-height: 30px;">
-        <span class="from"><b>00:00</b></span>
+        <span class="from"><i>0am</i></span>
 
         <div class="time-comparison show-two-days">
             <div class="planed end-time-next-day"
-                 style="--start-time: 14; --end-time: 15; --color: blue">
-                <span class="from">14:00</span>
-                <span class="to">15:00</span>
+                 style="--start-time: 14; --end-time: 15; --color: cornflowerblue">
+                <span class="from">2:00</span>
+                <span class="to">3:00</span>
             </div>
             <div class="recorded-time end-time-next-day"
-                 style="--start-time: 12; --end-time: 16; --color: brown">
+                 style="--start-time: 12; --end-time: 16; --color: lightgoldenrodyellow">
                 <span class="from">12:00</span>
-                <span class="to">16:00</span>
+                <span class="to">4:00</span>
             </div>
         </div>
-        <span class="center"><b>24:00</b></span>
-        <span class="to"><b>24:00</b></span>
+        <span class="center"><i>12pm</i></span>
+        <span class="to"><i>12pm</i></span>
+    </div>
+
+    <br />
+
+    <div class="time-comparison-wraper"
+         style="--timespan-gap: 5px; --bar-height: 30px;">
+        <span class="from"><i>0am</i></span>
+
+        <div class="time-comparison">
+            <div class="planed"
+                 style="--start-time: 14; --end-time: 23; --color: cornflowerblue">
+                <span class="from">2:00</span>
+                <span class="to">11:00</span>
+            </div>
+            <div class="recorded-time"
+                 style="--start-time: 12; --end-time: 16; --color: lightgoldenrodyellow">
+                <span class="from">12:00</span>
+                <span class="to">4:00</span>
+            </div>
+        </div>
+        <span class="to"><i>12pm</i></span>
+    </div>
+
+    <br />
+
+    <div class="time-comparison-wraper"
+         style="--timespan-gap: 5px; --bar-height: 30px;">
+        <span class="from"><i>0am</i></span>
+
+        <div class="time-comparison show-two-days">
+            <div class="planed"
+                 style="--start-time: 14; --end-time: 23; --color: cornflowerblue">
+                <span class="from">2:00</span>
+                <span class="to">11:00</span>
+            </div>
+            <div class="recorded-time end-time-next-day"
+                 style="--start-time: 12; --end-time: 16; --color: lightgoldenrodyellow">
+                <span class="from">12:00</span>
+                <span class="to">4:00</span>
+            </div>
+        </div>
+        <span class="center"><i>12pm</i></span>
+        <span class="to"><i>12pm</i></span>
     </div>
 </body>
 
