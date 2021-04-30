@@ -48,11 +48,11 @@
     border-radius: var(--border-radius);
 }
 
-.before-break{
+.before-break {
     border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
 }
 
-.after-break{
+.after-break {
     border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
 }
 
@@ -61,7 +61,7 @@
     position: relative;
 }
 
-div[class*="-break"]::after{
+div[class*="-break"]::after {
     content: '';
     position: absolute;
     height: calc(100% + 10px);
@@ -74,7 +74,7 @@ div[class*="-break"]::after{
     transform: translate(3px, -50%);
 }
 
-.after-break::after{
+.after-break::after {
     left: 0px;
     transform: translate(-3px, -50%) !important;
 }
@@ -184,6 +184,9 @@ span.center>* {
     align-items: center;
     user-select: none;
     gap: 10px;
+
+    --timespan-gap: 5px;
+    --bar-height: 30px;
 }
 
 .task-indicator {
