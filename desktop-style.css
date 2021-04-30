@@ -2,10 +2,16 @@
     width: 500px;
     height: calc(var(--bar-height) * 2);
     display: grid;
-    row-gap: 10px;
+    row-gap: 20px;
     grid-template-columns: repeat(24, 1fr);
     grid-template-areas: "planed-time""recorded-time";
     position: relative;
+
+    padding: 5px;
+}
+
+.show-two-days {
+    grid-template-columns: repeat(48, 1fr);
 }
 
 .time-comparison,
@@ -37,6 +43,10 @@
     background-color: var(--color);
 }
 
+.time-comparison>.end-time-next-day{
+    grid-column-end: calc(var(--end-time) + 25)
+}
+
 .time-comparison>div span {
     position: absolute;
     display: inline-table;
@@ -59,4 +69,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+span.center {
+    height: calc(var(--bar-height) * 2);
+    border-left: 1px lightgray dashed;
+    text-align: center;
+
+    position: absolute;
+    padding: 0;
+}
+
+span.center>b {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 var(--timespan-gap);
 }
