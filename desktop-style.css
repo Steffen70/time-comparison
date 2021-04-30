@@ -21,10 +21,6 @@
     border-style: solid;
 }
 
-.show-border {
-    grid-column-start: var(--pseudo-pos) \ span 1;
-}
-
 .time-comparison>.planed {
     grid-area: planed-time;
 }
