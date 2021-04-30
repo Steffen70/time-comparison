@@ -15,98 +15,109 @@
 
 <body>
     <style>
-        .planed {
-            --color: cornflowerblue
-        }
-
-        .recorded-time {
-            --color: lightgoldenrodyellow
+        .stats-wraper {
+            --timespan-gap: 5px;
+            --bar-height: 30px;
         }
     </style>
 
-    <div class="time-comparison-wraper"
-         style="--timespan-gap: 5px; --bar-height: 30px;">
-        <span class="from"><i>0am</i></span>
+    <div class="stats-wraper"
+         style="--color: 65, 105, 225;">
+        <span class="task-indicator"><b>HO</b></span>
 
-        <div class="time-comparison show-two-days">
-            <div class="planed end-time-next-day"
-                 style="--start-time: 14; --end-time: 15;">
-                <span class="from">2:00</span>
-                <span class="to">3:00</span>
+        <div class="time-comparison-wraper">
+
+            <span class="from"><i>0am</i></span>
+
+            <div class="time-comparison show-two-days">
+                <div class="planed end-time-next-day"
+                     style="--start-time: 14; --end-time: 16;">
+                    <span class="from">2:00</span>
+                    <span class="to">4:00</span>
+                </div>
+                <div class="recorded-time end-time-next-day"
+                     style="--start-time: 12; --end-time: 2;">
+                    <span class="from">12:00</span>
+                </div>
+                <div class="recorded-time start-time-next-day end-time-next-day"
+                     style="--start-time: 6; --end-time: 16;">
+                    <span class="to">4:00</span>
+                </div>
             </div>
-            <div class="recorded-time end-time-next-day"
-                 style="--start-time: 12; --end-time: 16;">
-                <span class="from">12:00</span>
-                <span class="to">4:00</span>
-            </div>
+            <span class="center"><i>12pm</i></span>
+            <span class="to"><i>12pm</i></span>
         </div>
-        <span class="center"><i>12pm</i></span>
-        <span class="to"><i>12pm</i></span>
+
+        <div class="stats">
+            <span class="color-swatch-planed">14h<i>&nbsp;geplant</i></span>
+            <span class="color-swatch-recorded-time">14h<i>&nbsp;erfasst</i></span>
+        </div>
     </div>
 
     <br />
 
-    <div class="time-comparison-wraper"
-         style="--timespan-gap: 5px; --bar-height: 30px;">
-        <span class="from"><i>0am</i></span>
+    <div class="stats-wraper"
+         style="--color: 205, 92, 92;">
+        <span class="task-indicator"><b>HW</b></span>
 
-        <div class="time-comparison">
-            <div class="planed"
-                 style="--start-time: 14; --end-time: 23;">
-                <span class="from">2:00</span>
-                <span class="to">11:00</span>
+        <div class="time-comparison-wraper">
+
+            <span class="from"><i>0am</i></span>
+
+            <div class="time-comparison show-two-days">
+                <div class="planed"
+                     style="--start-time: 10; --end-time: 20;">
+                    <span class="from">10:00</span>
+                    <span class="to">8:00</span>
+                </div>
+                <div class="recorded-time start-time-next-day end-time-next-day"
+                     style="--start-time: 8; --end-time: 16;">
+                    <span class="from">8:00</span>
+                    <span class="to">4:00</span>
+                </div>
             </div>
-            <div class="recorded-time"
-                 style="--start-time: 12; --end-time: 16;">
-                <span class="from">12:00</span>
-                <span class="to">4:00</span>
-            </div>
+            <span class="center"><i>12pm</i></span>
+            <span class="to"><i>12pm</i></span>
         </div>
-        <span class="to"><i>12pm</i></span>
+
+        <div class="stats">
+            <span class="color-swatch-planed">10h<i>&nbsp;geplant</i></span>
+            <span class="color-swatch-recorded-time">4h<i>&nbsp;erfasst</i></span>
+        </div>
     </div>
 
     <br />
 
-    <div class="time-comparison-wraper"
-         style="--timespan-gap: 5px; --bar-height: 30px;">
-        <span class="from"><i>0am</i></span>
+    <div class="stats-wraper"
+         style="--color: 95, 158, 160;">
+        <span class="task-indicator"><b>B</b></span>
 
-        <div class="time-comparison show-two-days">
-            <div class="planed"
-                 style="--start-time: 14; --end-time: 23;">
-                <span class="from">2:00</span>
-                <span class="to">11:00</span>
+        <div class="time-comparison-wraper">
+
+            <span class="from"><i>0am</i></span>
+
+            <div class="time-comparison">
+                <div class="planed"
+                     style="--start-time: 8; --end-time: 12;">
+                    <span class="from">8:00</span>
+                </div>
+                <div class="planed"
+                     style="--start-time: 13; --end-time: 16;">
+                    <span class="to">4:00</span>
+                </div>
+                <div class="recorded-time"
+                     style="--start-time: 8; --end-time: 15;">
+                    <span class="from">8:00</span>
+                    <span class="to">3:00</span>
+                </div>
             </div>
-            <div class="recorded-time end-time-next-day"
-                 style="--start-time: 12; --end-time: 16;">
-                <span class="from">12:00</span>
-                <span class="to">4:00</span>
-            </div>
+            <span class="to"><i>12pm</i></span>
         </div>
-        <span class="center"><i>12pm</i></span>
-        <span class="to"><i>12pm</i></span>
-    </div>
 
-    <br />
-
-    <div class="time-comparison-wraper"
-         style="--timespan-gap: 5px; --bar-height: 30px;">
-        <span class="from"><i>0am</i></span>
-
-        <div class="time-comparison show-two-days">
-            <div class="planed end-time-next-day"
-                 style="--start-time: 14; --end-time: 16;">
-                <span class="from">2:00</span>
-                <span class="to">4:00</span>
-            </div>
-            <div class="recorded-time"
-                 style="--start-time: 12; --end-time: 23;">
-                <span class="from">12:00</span>
-                <span class="to">11:00</span>
-            </div>
+        <div class="stats">
+            <span class="color-swatch-planed">7h<i>&nbsp;geplant</i></span>
+            <span class="color-swatch-recorded-time">7h<i>&nbsp;erfasst</i></span>
         </div>
-        <span class="center"><i>12pm</i></span>
-        <span class="to"><i>12pm</i></span>
     </div>
 </body>
 

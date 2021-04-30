@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
-.time-comparison-wraper * {
+.stats-wraper * {
     font-family: Lato;
 }
 
 .time-comparison {
-    width: 300px;
+    width: 600px;
     height: calc(var(--bar-height) * 2);
     display: grid;
     row-gap: 20px;
@@ -20,13 +20,12 @@
     grid-template-columns: repeat(48, 1fr);
 }
 
-.time-comparison,
-.show-border {
+.time-comparison {
     border-color: gray;
     border-width: 1px;
     border-style: solid;
 
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .time-comparison>.planed {
@@ -44,12 +43,20 @@
 
     position: relative;
 
-    background-color: var(--color);
+    background-color: rgb(var(--color));
 
     border-radius: calc(var(--bar-height) * 0.5);
 }
 
-.time-comparison>.end-time-next-day{
+.time-comparison>.planed {
+    background-color: rgba(var(--color), 0.5);
+}
+
+.time-comparison>.start-time-next-day {
+    grid-column-start: calc(var(--start-time) + 25);
+}
+
+.time-comparison>.end-time-next-day {
     grid-column-end: calc(var(--end-time) + 25)
 }
 
@@ -73,7 +80,7 @@
     transform: translate(-100%, -50%);
 }
 
-.time-comparison-wraper span {
+.stats-wraper span {
     padding: 0 var(--timespan-gap);
 
     font-size: 0.75em;
@@ -85,7 +92,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none;
 }
 
 span.center {
@@ -103,4 +109,55 @@ span.center>* {
     top: 50%;
     transform: translateY(-50%);
     padding: 0 var(--timespan-gap);
+}
+
+.stats {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+}
+
+.stats>span[class^="color-swatch"] {
+    position: relative;
+    color: black;
+    margin-right: calc(var(--bar-height) * 0.5);
+}
+
+.stats>span[class^="color-swatch"] i {
+    color: gray;
+}
+
+.stats>span[class^="color-swatch"]::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(var(--color));
+    width: calc(var(--bar-height) * 0.5);
+    height: calc(var(--bar-height) * 0.5);
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+}
+
+.stats>.color-swatch-planed::before {
+    background-color: rgba(var(--color), 0.5) !important;
+}
+
+.stats-wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    gap: 10px;
+}
+
+.task-indicator {
+    min-width: 20px;
+    border-radius: 4px;
+    background-color: rgb(var(--color));
+    color: white !important;
+    font-size: 1em !important;
+    display: flex;
+    justify-content: center;
 }
