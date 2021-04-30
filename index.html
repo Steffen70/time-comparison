@@ -22,7 +22,7 @@
     </style>
 
     <div class="stats-wraper"
-         style="--color: 65, 105, 225;">
+         style="--color-hex:#4169e1;">
         <span class="task-indicator"><b>HO</b></span>
 
         <div class="time-comparison-wraper">
@@ -57,7 +57,7 @@
     <br />
 
     <div class="stats-wraper"
-         style="--color: 205, 92, 92;">
+         style="--color-hex:#cd5c5c;">
         <span class="task-indicator"><b>HW</b></span>
 
         <div class="time-comparison-wraper">
@@ -89,7 +89,7 @@
     <br />
 
     <div class="stats-wraper"
-         style="--color: 95, 158, 160;">
+         style="--color-hex:#5f9ea0;">
         <span class="task-indicator"><b>B</b></span>
 
         <div class="time-comparison-wraper">
@@ -119,6 +119,60 @@
             <span class="color-swatch-recorded-time">7h<i>&nbsp;erfasst</i></span>
         </div>
     </div>
+
+    <br />
+
+    <div class="stats-wraper"
+         style="--color-hex:#ffa500;">
+        <span class="task-indicator"><b>SU</b></span>
+
+        <div class="time-comparison-wraper">
+
+            <span class="from"><i>0am</i></span>
+
+            <div class="time-comparison">
+                <div class="planed"
+                     style="--start-time: 8; --end-time: 16;">
+                    <span class="from">8:00</span>
+                    <span class="to">4:00</span>
+                </div>
+                <div class="recorded-time"
+                     style="--start-time: 8; --end-time: 12;">
+                    <span class="from">8:00</span>
+                </div>
+                <div class="recorded-time"
+                     style="--start-time: 13; --end-time: 17;">
+                    <span class="to">5:00</span>
+                </div>
+            </div>
+            <span class="to"><i>12pm</i></span>
+        </div>
+
+        <div class="stats">
+            <span class="color-swatch-planed">8h<i>&nbsp;geplant</i></span>
+            <span class="color-swatch-recorded-time">8h<i>&nbsp;erfasst</i></span>
+        </div>
+    </div>
+
+    <script>
+        function hexToRgb(hex) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        let compOccurence = document.querySelectorAll('.stats-wraper');
+
+        compOccurence.forEach(o => {
+            const rgbColorValue = hexToRgb(window.getComputedStyle(o).getPropertyValue('--color-hex'));
+
+            if (rgbColorValue)
+                o.style.setProperty('--color', `${Object.values(rgbColorValue).join(', ')}`);
+        });
+    </script>
 </body>
 
 </html>
