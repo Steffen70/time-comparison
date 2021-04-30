@@ -44,8 +44,39 @@
     position: relative;
 
     background-color: rgb(var(--color));
+    --border-radius: calc(var(--bar-height) * 0.5);
+    border-radius: var(--border-radius);
+}
 
-    border-radius: calc(var(--bar-height) * 0.5);
+.before-break{
+    border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
+
+.after-break{
+    border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+.before-break,
+.after-break {
+    position: relative;
+}
+
+div[class*="-break"]::after{
+    content: '';
+    position: absolute;
+    height: calc(100% + 10px);
+    border-left-color: gray;
+    border-left-width: 1px;
+    border-left-style: dashed;
+
+    right: 0;
+    top: 50%;
+    transform: translate(3px, -50%);
+}
+
+.after-break::after{
+    left: 0px;
+    transform: translate(-3px, -50%) !important;
 }
 
 .time-comparison>.planed {
@@ -109,6 +140,9 @@ span.center>* {
     top: 50%;
     transform: translateY(-50%);
     padding: 0 var(--timespan-gap);
+
+    background-color: white;
+    z-index: 100;
 }
 
 .stats {
