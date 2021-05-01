@@ -26,6 +26,7 @@
     border-style: solid;
 
     border-radius: 4px;
+    background-color: white;
 }
 
 .time-comparison>.planed {
@@ -65,18 +66,30 @@ div[class*="-break"]::after {
     content: '';
     position: absolute;
     height: calc(100% + 10px);
-    border-left-color: gray;
-    border-left-width: 1px;
-    border-left-style: dashed;
+    border-color: gray;
+    border-right-width: 1px;
+    border-right-style: dashed;
+    background-color: white;
+    width: 2px;
 
-    right: 0;
+    right: 0px;
     top: 50%;
-    transform: translate(3px, -50%);
+    transform: translateY(-50%);
+    z-index: 80;
 }
 
 .after-break::after {
     left: 0px;
-    transform: translate(-3px, -50%) !important;
+    border-right: none !important;
+}
+
+.after-break.same-time::after {
+    width: 1px;
+}
+
+.after-break:not(.same-time)::after{
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 
 .time-comparison>.planed {
@@ -193,8 +206,11 @@ span.center>* {
     min-width: 20px;
     border-radius: 4px;
     background-color: rgb(var(--color));
-    color: white !important;
-    font-size: 1em !important;
     display: flex;
     justify-content: center;
+}
+
+.task-indicator * {
+    color: white;
+    font-size: 1.2em;
 }
